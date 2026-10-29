@@ -1,38 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
+<!doctype html>
+<!--
+  Ferramentas de IA utilizadas:
+  Claude (Anthropic) - apoio na construção do cabeçalho (submenus e menu hamburger
+  apenas com HTML e CSS) e da secção inicial com vídeo, e explicação do código.
+-->
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Summit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="topbar">
-  <div class="topbar-inner">
-    <a class="logo" href="#inicio">
-      <!-- <span class="logo-mark"><img src="img/logo.png"></span> -->
-        <div class="topbar-logo-inner">
-            <img src="img/logo.png" alt="Logo Websummit">
-            <span class="topbar-logo-name">websummit</span>    
-            <span class="topbar-logo-date">Lisbon . Data . XX-XX, XXXX</span>
+      <div class="topbar-inner">
+        <a class="logo" href="#">
+          <span class="topbar-logo-inner">
+            <img src="img/logo.png" alt="" />
+            <span class="topbar-logo-name">websummit</span>
+            <span class="topbar-logo-date">Lisbon · November 9-12, 2026</span>
+          </span>
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="btn-menu" aria-label="Abrir menu">
+          <svg class="icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+          <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg>
+        </label>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Attendees</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Exhibitors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Startups</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Investors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">More</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <a class="btn-tickets" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
+              <path d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480q0-17-11.5-28.5T480-520q-17 0-28.5 11.5T440-480q0 17 11.5 28.5T480-440Zm0-160q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm320 440H160q-33 0-56.5-23.5T80-240v-160q33 0 56.5-23.5T160-480q0-33-23.5-56.5T80-560v-160q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v160q-33 0-56.5 23.5T800-480q0 33 23.5 56.5T880-400v160q0 33-23.5 56.5T800-160Zm0-80v-102q-37-22-58.5-58.5T720-480q0-43 21.5-79.5T800-618v-102H160v102q37 22 58.5 58.5T240-480q0 43-21.5 79.5T160-342v102h640ZM480-480Z" />
+            </svg>
+            Book tickets
+          </a>
+          <a class="btn-exhibit" href="#">Exhibit</a>
+          <a class="btn-user" href="#" aria-label="A minha conta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
+              <path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+            </svg>
+          </a>
+        </div>
       </div>
-    </a>
+    </header>
 
-    <nav class="main-nav" aria-label="Navegação principal">
-      <a href="#">Participantes</a>
-      <a href="#">Expositores</a>
-      <a href="#">Startups</a>
-      <a href="#">Investidores</a>
-      <a href="#">Media</a>
-      <a href="#">Mais</a>
-    </nav>
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-video">
+            <video src="video/cat.mp4" autoplay muted loop playsinline></video>
+          </div>
 
-    <div class="actions">
-      <a class="btn-tickets" href="#">Bilhetes</a>
-      <a class="btn-exhibit" href="#">Expor</a>
-      <a class="btn-user" href="#" aria-label="A minha conta"></a>
-    </div>
-  </div>
-</header>
-</body>
+          <div class="hero-info">
+            <span class="hero-date">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
+                <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+              </svg>
+              Lisbon • November 9-12, 2026
+            </span>
+
+            <h1>“The best tech conference on the planet” – Forbes</h1>
+            <p>
+              Tech leaders, investors, and entrepreneurs gather at Web Summit to
+              shape the future of the industry.
+            </p>
+            <p>Don’t miss out. Book now before prices increase.</p>
+
+            <div class="hero-buttons">
+              <a class="hero-btn hero-btn-tickets" href="#">Book tickets</a>
+              <a class="hero-btn hero-btn-exhibit" href="#">Exhibit</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
