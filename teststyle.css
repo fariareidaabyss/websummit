@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --white: #ffffff;
+    --primary: #008484;
+    --nav-link-text: #333333;
+}
+
+body{
+    font-family: Inter, serif;
+    background-color: #333333;
+    color: #333333;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.red{ background: red; }
+.blue{ background: blue; }
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+}
+
+.relative{
+    position: relative;
+    right: -100px;
+}

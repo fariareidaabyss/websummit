@@ -1,295 +1,590 @@
-<!doctype html>
-<html lang="pt-PT">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Summit</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="topbar-inner">
-        <a class="logo" href="#">
-          <span class="topbar-logo-inner">
-            <img src="img/logo.png" alt="" />
-            <span class="topbar-logo-name">websummit</span>
-            <span class="topbar-logo-date">Lisbon · November 9-12, 2026</span>
-          </span>
-        </a>
 
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-        <label for="menu-toggle" class="btn-menu" aria-label="Abrir menu">
-          <svg
-            class="icon-open"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 -960 960 960"
-            fill="currentColor"
-          >
-            <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            />
-          </svg>
-          <svg
-            class="icon-close"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 -960 960 960"
-            fill="currentColor"
-          >
-            <path
-              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-            />
-          </svg>
-        </label>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
 
-        <nav class="main-nav" aria-label="Navegação principal">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Attendees</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Exhibitors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Startups</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Investors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Media</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">More</a>
-            </li>
-          </ul>
-        </nav>
+    <nav class="nav nav-outer">
+        <header class="nav-wrapper">
+            <div class="nav-inner-wrapper">
+                <!-- Logo -->
+                <a class="nav-logo-wrapper" href="#">
+                    <img src="img/web-summit-lisbon-1024x183.png" alt="Logo Websummit com data do evento em 2026" loading="lazy">
+                </a>
 
-        <div class="actions">
-          <a class="btn-tickets" href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 -960 960 960"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm0-160q17 0 28.5-11.5T520-480q0-17-11.5-28.5T480-520q-17 0-28.5 11.5T440-480q0 17 11.5 28.5T480-440Zm0-160q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm320 440H160q-33 0-56.5-23.5T80-240v-160q33 0 56.5-23.5T160-480q0-33-23.5-56.5T80-560v-160q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v160q-33 0-56.5 23.5T800-480q0 33 23.5 56.5T880-400v160q0 33-23.5 56.5T800-160Zm0-80v-102q-37-22-58.5-58.5T720-480q0-43 21.5-79.5T800-618v-102H160v102q37 22 58.5 58.5T240-480q0 43-21.5 79.5T160-342v102h640ZM480-480Z"
-              />
-            </svg>
-            Book tickets
-          </a>
-          <a class="btn-exhibit" href="#">Exhibit</a>
-          <a class="btn-user" href="#" aria-label="A minha conta">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 -960 960 960"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-inner">
-          <div class="hero-video">
-            <video src="video/cat.mp4" autoplay muted loop playsinline></video>
-          </div>
+                <!-- Navigation Menu (Desktop) -->
+                <ul class="nav-menu-desktop nav-links-list">
 
-          <div class="hero-info">
-            <span class="hero-date">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 -960 960 960"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z"
-                />
-              </svg>
-              Lisbon • November 9-12, 2026
-            </span>
+                    <!-- Attendees -->
+                    <li class="nav-link-item-wrapper">
+                        <div class="nav-link-item">
+                            <span>Attendees</span>
+    
+                            <span class="nav-link-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                            </span>
+                        </div>
 
-            <h1>“The best tech conference on the planet” – Forbes</h1>
-            <p>
-              Tech leaders, investors, and entrepreneurs gather at Web Summit to
-              shape the future of the industry.
-            </p>
-            <p>Don’t miss out. Book now before prices increase.</p>
+                        <!-- Arrow Decor -->
+                        <div class="nav-menu-arrow-decor">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10.11l-4.6,4.6L6.69,14L12,8.69L17.31,14L16.6,14.71L12,10.11Z"/></svg>
+                            </span>
+                        </div>
 
-            <div class="hero-buttons">
-              <a class="hero-btn hero-btn-tickets" href="#">Book tickets</a>
-              <a class="hero-btn hero-btn-exhibit" href="#">Exhibit</a>
+                        <!-- Sub item Menu -->
+                        <ul class="nav-link-subitem-wrapper">
+                            <li class="nav-link-subitem">
+                                <a href="#">Meet our attendees</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Meet our speakers</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Content tracks</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Schedule</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Meetups</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Bring your team</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Exhibitors -->
+                    <li class="nav-link-item-wrapper">
+                        <div class="nav-link-item">
+                            <span>Exhibitors</span>
+    
+                            <span class="nav-link-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Arrow Decor -->
+                        <div class="nav-menu-arrow-decor">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10.11l-4.6,4.6L6.69,14L12,8.69L17.31,14L16.6,14.71L12,10.11Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Sub item Menu -->
+                        <ul class="nav-link-subitem-wrapper">
+                            <li class="nav-link-subitem">
+                                <a href="#">Partner with us</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Meet our partners</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+
+                    <!-- Startups -->
+                    <li class="nav-link-item-wrapper">
+                        <div class="nav-link-item">
+                            <span>Startups</span>
+    
+                            <span class="nav-link-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Arrow Decor -->
+                        <div class="nav-menu-arrow-decor">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10.11l-4.6,4.6L6.69,14L12,8.69L17.31,14L16.6,14.71L12,10.11Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Sub item Menu -->
+                        <ul class="nav-link-subitem-wrapper">
+                            <li class="nav-link-subitem">
+                                <a href="#">Apply for our startup programme</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">IBM Sports Tech Startup Prize Competition</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Featured startups</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Startup journey</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">PITCH</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Impact startups</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Investors -->
+                    <li class="nav-link-item-wrapper">
+                        <div class="nav-link-item">
+                            <span>Investors</span>
+    
+                            <span class="nav-link-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Arrow Decor -->
+                        <div class="nav-menu-arrow-decor">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10.11l-4.6,4.6L6.69,14L12,8.69L17.31,14L16.6,14.71L12,10.11Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Sub item Menu -->
+                        <ul class="nav-link-subitem-wrapper">
+                            <li class="nav-link-subitem">
+                                <a href="#">Investors</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">LP Investors</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Venture</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Media -->
+                    <li class="nav-link-item-wrapper">
+                        <div class="nav-link-item">
+                            <span>Media</span>
+    
+                            <span class="nav-link-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Arrow Decor -->
+                        <div class="nav-menu-arrow-decor">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10.11l-4.6,4.6L6.69,14L12,8.69L17.31,14L16.6,14.71L12,10.11Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Sub item Menu -->
+                        <ul class="nav-link-subitem-wrapper">
+                            <li class="nav-link-subitem">
+                                <a href="#">Media? Join us at Web Summit</a>
+                            </li>
+                            <li class="nav-link-subitem">
+                                <a href="#">Meet out media partners</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- More -->
+                    <li class="nav-link-item-wrapper">
+                        <div class="nav-link-item">
+                            <span>More</span>
+    
+                            <span class="nav-link-chevron">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Arrow Decor -->
+                        <div class="nav-menu-arrow-decor">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,10.11l-4.6,4.6L6.69,14L12,8.69L17.31,14L16.6,14.71L12,10.11Z"/></svg>
+                            </span>
+                        </div>
+
+                        <!-- Sub item Menu -->
+                        <ul class="nav-link-subitem-wrapper">
+                            <li class="nav-link-subitem">
+                                <a href="#">Essential information</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Web Summit reviews</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Night Summit</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">VIP experience</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Attendee experience</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Women in Tech</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Developer programme</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Convince your boss</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Hotels</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Volunteers</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Ambassadors programme</a>
+                            </li>
+
+                            <li class="nav-link-subitem">
+                                <a href="#">Blog</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- Navigation Menu (Mobile / Tablet) -->
+                <input type="checkbox" id="nav-menu-toggle" class="nav-menu-toggle mobile tablet"/>
+                <div class="nav-menu-mobile">
+
+                    <!-- Buttons -->
+                    <div class="nav-menu-buttons-wrapper mobile">
+                        <!-- Tickets Button (Mobile) -->
+                        <a class="button gradient" href="#">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="#e3e3e3"><path d="M12,13.9l1.5,1.15q0.28,0.23 0.6,0.01t0.2-0.56l-0.6-1.9l1.67-1.3q0.28-0.22 0.15-0.56T15.05,10.4H13.1L12.48,8.48Q12.35,8.13 12,8.13T11.53,8.48L10.9,10.4H8.93q-0.35,0-0.46,0.34T8.63,11.3l1.63,1.3l-0.6,1.93q-0.13,0.35 0.18,0.56t0.6-0.01L12,13.9ZM4,20q-0.82,0-1.41-0.59T2,18V14.63q0-0.28 0.18-0.48T2.63,13.9q0.6-0.2 0.99-0.72T4,12T3.61,10.83T2.63,10.1Q2.35,10.05 2.18,9.85T2,9.38V6Q2,5.18 2.59,4.59T4,4H20q0.83,0 1.41,0.59Q22,5.18 22,6V9.38q0,0.27-0.17,0.47T21.38,10.1q-0.6,0.2-0.99,0.72T20,12t0.39,1.17t0.99,0.72q0.28,0.05 0.45,0.25T22,14.63V18q0,0.82-0.59,1.41T20,20H4Zm0-2H20V15.45q-0.93-0.55-1.46-1.46Q18,13.08 18,12t0.54-1.99T20,8.55V6H4V8.55Q4.93,9.1 5.46,10.01T6,12T5.46,13.99T4,15.45V18Zm8-6Z"/></svg>
+                            <span>Book tickets</span>
+                        </a>
+                        
+                        <!-- Exhibit Button (Mobile) -->
+                        <a class="button" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="#e3e3e3"><path d="M2,19V5Q2,4.17 2.59,3.59T4,3h6q0.83,0 1.41,0.59T12,5V7h8q0.83,0 1.41,0.59T22,9V19q0,0.82-0.59,1.41T20,21H4q-0.82,0-1.41-0.59T2,19Zm2,0H6V17H4v2Zm0-4H6V13H4v2Zm0-4H6V9H4v2ZM4,7H6V5H4V7ZM8,19h2V17H8v2Zm0-4h2V13H8v2Zm0-4h2V9H8v2ZM8,7h2V5H8V7Zm4,12h8V9H12v2h2v2H12v2h2v2H12v2Zm4-6V11h2v2H16Zm0,4V15h2v2H16Z"/></svg>
+                            <span>Exhibit</span>
+                        </a>
+                    </div>
+
+                    <!-- Links -->
+                    <ul class="nav-links-list">
+                    <!-- Attendees -->
+                        <li> 
+                            <details class="nav-link" name="nav-burger-item">
+                                <summary>
+                                    <span>Attendees</span>
+                                    
+                                    <span class="nav-link-chevron">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                                    </span>
+                                </summary>
+
+                                <!-- Sub Items -->
+                                <ul class="nav-link-subitem-wrapper">
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Meet our attendees</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Meet our speakers</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Content tracks</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Schedule</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Meetups</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Bring your team</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+
+                    <!-- Exhibitors -->
+                        <li> 
+                            <details class="nav-link" name="nav-burger-item">
+                                <summary>
+                                    <span>Exhibitors</span>
+                                    
+                                    <span class="nav-link-chevron">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                                    </span>
+                                </summary>
+
+                                <!-- Sub Items -->
+                                <ul class="nav-link-subitem-wrapper">
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Partner with us</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Meet our partners</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+
+                    <!-- Startups -->
+                        <li> 
+                            <details class="nav-link" name="nav-burger-item">
+                                <summary>
+                                    <span>Startups</span>
+                                    
+                                    <span class="nav-link-chevron">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                                    </span>
+                                </summary>
+
+                                <!-- Sub Items -->
+                                <ul class="nav-link-subitem-wrapper">
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Apply for our startup programme</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">IBM Sports tech Startup Prize Competition</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Featured startups</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Startup journey</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">PITCH</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Impact startups</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+
+                    <!-- Investors -->
+                        <li> 
+                            <details class="nav-link" name="nav-burger-item">
+                                <summary>
+                                    <span>Investors</span>
+                                    
+                                    <span class="nav-link-chevron">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                                    </span>
+                                </summary>
+
+                                <!-- Sub Items -->
+                                <ul class="nav-link-subitem-wrapper">
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Investors</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">LP Investors</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Venture</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+
+                    <!-- Media -->
+                        <li> 
+                            <details class="nav-link" name="nav-burger-item">
+                                <summary>
+                                    <span>Media</span>
+                                    
+                                    <span class="nav-link-chevron">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                                    </span>
+                                </summary>
+
+                                <!-- Sub Items -->
+                                <ul class="nav-link-subitem-wrapper">
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Media? Joun us at Web Summit</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Meet our media partners</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+
+                    <!-- More -->
+                        <li> 
+                            <details class="nav-link" name="nav-burger-item">
+                                <summary>
+                                    <span>More</span>
+                                    
+                                    <span class="nav-link-chevron">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M12.6,12L8.7,8.1Q8.43,7.82 8.43,7.4T8.7,6.7T9.4,6.43T10.1,6.7l4.6,4.6q0.15,0.15 0.21,0.33T14.98,12t-0.06,0.38T14.7,12.7l-4.6,4.6q-0.28,0.27-0.7,0.27T8.7,17.3q-0.28-0.28-0.28-0.7T8.7,15.9L12.6,12Z"/></svg>
+                                    </span>
+                                </summary>
+                                
+                                <!-- Sub Items -->
+                                <ul class="nav-link-subitem-wrapper">
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Web Summit review</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Night Summit</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">VIP experience</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Attendee experience</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Women in Tech</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Developer programme</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Convince your boss</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Hotels</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Volunteers</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Ambassadors programme</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Apply to speak</a>
+                                    </li>
+                                    <li class="nav-link-subitem">
+                                        <a href="#">Blog</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+
+                    <!-- Login (Mobile / Tablet) -->
+                    <div id="nav-login-mobile">
+                        <a href="#">Login</a>
+                    </div>
+                </div>
+
+
+                <!-- Action Buttons -->
+                <div class="nav-actions-wrapper">
+                    <div class="nav-actions">
+                        <!-- Tickets Button (Tablet / Desktop) -->
+                        <a class="button gradient tablet desktop" href="#">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="#e3e3e3"><path d="M12,13.9l1.5,1.15q0.28,0.23 0.6,0.01t0.2-0.56l-0.6-1.9l1.67-1.3q0.28-0.22 0.15-0.56T15.05,10.4H13.1L12.48,8.48Q12.35,8.13 12,8.13T11.53,8.48L10.9,10.4H8.93q-0.35,0-0.46,0.34T8.63,11.3l1.63,1.3l-0.6,1.93q-0.13,0.35 0.18,0.56t0.6-0.01L12,13.9ZM4,20q-0.82,0-1.41-0.59T2,18V14.63q0-0.28 0.18-0.48T2.63,13.9q0.6-0.2 0.99-0.72T4,12T3.61,10.83T2.63,10.1Q2.35,10.05 2.18,9.85T2,9.38V6Q2,5.18 2.59,4.59T4,4H20q0.83,0 1.41,0.59Q22,5.18 22,6V9.38q0,0.27-0.17,0.47T21.38,10.1q-0.6,0.2-0.99,0.72T20,12t0.39,1.17t0.99,0.72q0.28,0.05 0.45,0.25T22,14.63V18q0,0.82-0.59,1.41T20,20H4Zm0-2H20V15.45q-0.93-0.55-1.46-1.46Q18,13.08 18,12t0.54-1.99T20,8.55V6H4V8.55Q4.93,9.1 5.46,10.01T6,12T5.46,13.99T4,15.45V18Zm8-6Z"/></svg>
+                            <span>Book tickets</span>
+                        </a>
+
+                        <!-- Exhibit Button (Tablet / Desktop) -->
+                        <a class="button tablet desktop" href="#">
+                            <span>Exhibit</span>
+                        </a>
+
+                        <!-- Tickets Button (Mobile) -->
+                        <a class="button gradient mobile" href="#">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="#e3e3e3"><path d="M12,13.9l1.5,1.15q0.28,0.23 0.6,0.01t0.2-0.56l-0.6-1.9l1.67-1.3q0.28-0.22 0.15-0.56T15.05,10.4H13.1L12.48,8.48Q12.35,8.13 12,8.13T11.53,8.48L10.9,10.4H8.93q-0.35,0-0.46,0.34T8.63,11.3l1.63,1.3l-0.6,1.93q-0.13,0.35 0.18,0.56t0.6-0.01L12,13.9ZM4,20q-0.82,0-1.41-0.59T2,18V14.63q0-0.28 0.18-0.48T2.63,13.9q0.6-0.2 0.99-0.72T4,12T3.61,10.83T2.63,10.1Q2.35,10.05 2.18,9.85T2,9.38V6Q2,5.18 2.59,4.59T4,4H20q0.83,0 1.41,0.59Q22,5.18 22,6V9.38q0,0.27-0.17,0.47T21.38,10.1q-0.6,0.2-0.99,0.72T20,12t0.39,1.17t0.99,0.72q0.28,0.05 0.45,0.25T22,14.63V18q0,0.82-0.59,1.41T20,20H4Zm0-2H20V15.45q-0.93-0.55-1.46-1.46Q18,13.08 18,12t0.54-1.99T20,8.55V6H4V8.55Q4.93,9.1 5.46,10.01T6,12T5.46,13.99T4,15.45V18Zm8-6Z"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Menu Icon (Mobile / Tablet) -->
+                    <label for="nav-menu-toggle" id="nav-menu-toggle-label">
+                        <!-- Burger -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M3.5,17.63v-1.5h17v1.5H3.5Zm0-4.88v-1.5h17v1.5H3.5Zm0-4.88V6.37h17v1.5H3.5Z"/></svg>
+                        
+                        <!-- Cross -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M6.4,18.65L5.35,17.6l5.6-5.6L5.35,6.4L6.4,5.35l5.6,5.6l5.6-5.6L18.65,6.4L13.05,12l5.6,5.6L17.6,18.65L12,13.05l-5.6,5.6Z"/></svg>
+                    </label>
+
+                    <!-- Login Button (Desktop) -->
+                    <a id="nav-login-desktop" class="desktop" href="#"> 
+                        <!-- Person -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e3e3e3"><path d="M9.53,10.67Q8.5,9.64 8.5,8.19T9.53,5.72T12,4.69t2.47,1.03T15.5,8.19t-1.03,2.47T12,11.69T9.53,10.67ZM4.5,19.31V17.08q0-0.73 0.4-1.36t1.07-0.96q1.48-0.73 2.99-1.09T12,13.31t3.04,0.36t2.99,1.09q0.67,0.34 1.07,0.96t0.4,1.36v2.22H4.5ZM6,17.81H18V17.08q0-0.3-0.18-0.56T17.35,16.1q-1.29-0.64-2.64-0.96T12,14.81T9.29,15.14T6.65,16.1q-0.3,0.16-0.48,0.42T6,17.08v0.72Zm7.41-8.2Q14,9.02 14,8.19T13.41,6.78T12,6.19T10.59,6.78T10,8.19T10.59,9.6T12,10.19T13.41,9.6ZM12,8.19Zm0,9.62Z"/></svg>
+                    </a>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </header>
+    </nav>
+    
+    <main>
 
-      <section class="speakers">
-        <h2>Meet our 2026 speakers</h2>
+        <!-- Hero -->
+        <section id="hero-section">
+            <div class="section-inner-wrapper">
+                <div id="hero-video-grid">
 
-        <ul class="speakers-grid">
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Agibot A3</h3>
-                <p>Humanoid Robot</p>
-                <p>AgiBot</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Tao Zhang</h3>
-                <p>Co-founder &amp; CPO</p>
-                <p>Manus AI</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Li Chen</h3>
-                <p>Co-founder</p>
-                <p>Unitree</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Galbot G1</h3>
-                <p>Embodied Large-Model Robot</p>
-                <p>Galbot</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Michele Catasta</h3>
-                <p>President</p>
-                <p>Replit</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Dahai Li</h3>
-                <p>Co-founder &amp; CEO</p>
-                <p>ModelBest</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Fei Xu</h3>
-                <p>CMO</p>
-                <p>Xiaomi Group</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Leo Haojun Wang</h3>
-                <p>Co-Founder &amp; CFO</p>
-                <p>Pony.ai</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Alan Shen</h3>
-                <p>MD Global</p>
-                <p>MiniMax</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="speaker-card" href="#">
-              <img src="" alt="" />
-              <div class="speaker-info">
-                <h3>Ling Ge</h3>
-                <p>Chief Investment and Strategy Officer</p>
-                <p>Tencent</p>
-              </div>
-            </a>
-          </li>
-        </ul>
+                    <!-- Video -->
+                    <div id="hero-video-wrapper">
+                        <video src="./vid/hero-vid.mp4" autoplay loop muted></video>
+                    </div>
 
-        <a class="btn-speakers" href="#">See all speakers</a>
-      </section>
+                    <!-- Info  / Buttons -->
+                    <div id="hero-info-wrapper">
+                        <div class="flex-center">
+                            <div id="hero-info-inner-wrapper">
+                                <!-- Event date -->
+                                <time>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                            <path d="M5.31,21.5q-0.76,0-1.28-0.52T3.5,19.69V6.31q0-0.76 0.52-1.28T5.31,4.5H6.69V3.15q0-0.33 0.22-0.55T7.46,2.38T8.01,2.6T8.23,3.15V4.5h7.58V3.13q0-0.32 0.22-0.53t0.53-0.22T17.09,2.6t0.22,0.53V4.5h1.38q0.76,0 1.28,0.52T20.5,6.31V19.69q0,0.76-0.52,1.28T18.69,21.5H5.31Zm0-1.5H18.69q0.12,0 0.21-0.1T19,19.69V10.31H5v9.38q0,0.12 0.1,0.21T5.31,20ZM5,8.81H19V6.31q0-0.12-0.1-0.21T18.69,6H5.31Q5.19,6 5.1,6.1T5,6.31v2.5Zm0,0V6.31Q5,6.19 5,6.1T5,6Q5,6 5,6.1T5,6.31v2.5Z"/>
+                                        </svg>
+                                    </span>
+                                    <span>LISBON • NOVEMBER 9-12, 2026</span>
+                                </time>
+    
+                                <!-- Info -->
+                                <div id="hero-info-wrapper">
+                                    <h1>
+                                        “The best tech conference on the planet” – Forbes
+                                    </h1>
+                                    <p>
+                                        Tech leaders, investors, and entrepreneurs gather at Web Summit to shape the future of the industry.
+                                    </p>
+                                    <p>
+                                        Our startup programme and exhibitor options are now sold out. Last remaining tickets are selling fast. Book now so you don’t miss out!
+                                    </p>
+                                </div>
+    
+                                <!-- Buttons -->
+                                <div id="hero-button-wrapper">
+                                    <a href="#" class="button gradient">Book tickets</a>
+                                    <a href="#" class="button">Exhibit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <section class="newsletter">
-        <div class="newsletter-inner">
-          <div class="newsletter-text">
-            <h2>Get access to exclusive discounts and announcements</h2>
-            <p>
-              Join the Web Summit network now for updates, speakers news, and
-              early access to offers.
-            </p>
-          </div>
+                </div>
+            </div>
+        </section>
 
-          <form class="newsletter-form" action="#">
-            <label for="email">Email address <span>*</span></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="user@example.com"
-              required
-            />
-
-            <label for="nome">First name <span>*</span></label>
-            <input type="text" id="nome" name="nome" required />
-
-            <p>
-              You may withdraw your consent at any time. Learn more on our
-              <a href="#">Privacy Policy</a> and <a href="#">T&amp;Cs</a>.
-            </p>
-            <button type="submit">Join our network</button>
-          </form>
-        </div>
-      </section>
-      <section class="selfie">
-        <h1>Why will 70,000+ people gather in Lisbon?</h1>
-        <p>
-          Web Summit connects a new generation of founders with investors,
-          journalists and technology leaders from around the world. We’re proud
-          of our track record in live events. The Guardian calls us “Glastonbury
-          for geeks”, POLITICO “the world’s premier tech conference” and Inc.
-          “the best technology conference on the planet”. Don’t miss out, join
-          us in Lisbon this November.
-        </p>
-        <button type="submit" class="">Join our network</button>
-      </section>
+        <section>
+            <div class="section-inner-wrapper">
+                <div class="lorem"><br><br><br>Lorem Ipsum <br><br><br></div>
+            </div>
+        </section>
     </main>
-  </body>
+    
+</body>
 </html>
