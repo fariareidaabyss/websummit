@@ -11,6 +11,11 @@
     --nav-link-text: #333333;
 
     --btn-gradient: linear-gradient(93deg, #DE0E7B 1.57%, #6B4AA4 70.53%, #00ACA8 95.39%);
+    --btn-learn-more: #0c1439;
+
+    --floating-grid-gradient: linear-gradient(180deg, var(--white) 0%, #00aca8 50%, #cb1977 100%);
+    --slider-gradient: linear-gradient(180deg, #0c1439 0%, #cb1977 100%);
+    --form1-gradient: linear-gradient(180deg, #0c1439 0%, #654da0 100%)
 }
 
 *{
@@ -25,7 +30,7 @@ body{
     letter-spacing: 0px;
     line-height: 1.5rem;
 
-    background-color: rgb(140, 139, 104);
+    background-color: var(--white);
 }
 
 h1, h2, h3, h4, h5{
@@ -85,7 +90,7 @@ ul{
     width: 100%;
 
     border-radius: 0.25rem;
-    background: #121a3e;
+    background: var(--btn-learn-more);
 
     color: var(--white);
     letter-spacing: 0.5px;
@@ -100,11 +105,6 @@ ul{
 .mobile{ display: flex; }
 .tablet, .desktop{ display: none; }
 
-.flex-center{
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-}
 
 
 
@@ -112,7 +112,7 @@ ul{
 /* MOBILE */
 /* ============================================================ */
 
-/* querie apenas para poder esconder tudo duma vez */
+/* query apenas para poder esconder tudo duma vez */
 
 @media screen{
     
@@ -366,13 +366,31 @@ ul{
 
 
     .lorem{
-        color: white;
-        background-color: rgba(255, 0, 0, 0.419);
-        width: 100%;
-        height: 100%;
-        text-align: center;
+        background: url(./img/hero-bg.jpg);
+        background-size: cover;
+        background-position: center;
 
-        border: 5px solid rgb(68, 68, 68);
+        .section-inner-wrapper{
+            & span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 24rem;
+
+                background: var(--slider-gradient);
+                
+                color: white;
+                font-size: 1.5rem;
+                letter-spacing: 0.15rem;
+                font-weight: 600;
+
+                border: 3px solid var(--primary);
+                border-radius: 1.25rem;
+
+                box-shadow: 0 0 12px 0 black;
+            }
+        }
     }
 
 
@@ -383,22 +401,39 @@ ul{
         justify-content: center;
         width: 100%;
         padding: 40px 0px;
-        background-color: #0c1439;
     }
     
     .section-inner-wrapper{
         width: 100%;
-        max-width: 96rem;
-        padding: 0 1rem;
+        padding: 0 0.9375rem;
+        margin: 0 auto;
     }
 
+    .section-title-wrapper{
+        padding: 0px 0px 2.5rem 0px;
+
+        & h2{
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 2.25rem;
+            letter-spacing: 0.25px;
+        }
+    }
+
+
+    /* Hero Section */
     #hero-section{
         background: url(./img/hero-bg.jpg);
         background-size: cover;
         background-position: center;
-        /* miguel */
         padding-top: 24px;
         padding-bottom: 64px;
+
+        & .section-inner-wrapper{ 
+            width: 100%; 
+            padding: 0 2rem;
+        }        
     }
 
     #hero-video-grid{
@@ -434,7 +469,6 @@ ul{
         }
     }
 
-    
     #hero-info-wrapper{
         color: var(--white);
         fill: var(--white);
@@ -528,31 +562,14 @@ ul{
         }
     }
 
+
     /* Speakers */
-    #speakers-section{
-        padding: 0px 0px 40px; /* em cima quem da o espaco e a linha do titulo */
-        background-color: var(--white);
-    }
-
-   
-    #speakers-title-wrapper{
-        padding: 2.5rem 0px;
-
-        & h2{
-            text-align: center;
-            font-size: 1.75rem;
-            line-height: 2.25rem;
-            letter-spacing: 0.25px;
-        }
-    }
-
-   
     #speakers-grid{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 16px;
+        grid-template-columns: repeat(2, minmax(5rem, 1fr));
+        gap: 1rem;
 
-        max-width: 1024px;
+        max-width: 64rem;
         margin: 0 auto;
     }
 
@@ -602,6 +619,64 @@ ul{
     }
 
     
+    /* Brands Sections */
+    .brands-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        align-items: center;
+        justify-content: center;
+
+        gap: 1rem;
+        margin: 0px auto;
+    }
+
+    .brands-grid-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+
+        padding: 16px;
+        width: 100%;
+        height: auto;
+        border-radius: 0.9rem;
+
+
+        & img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    /* Promo Video */
+    #promo-video-wrapper{
+        padding: 0;
+    }
+
+    #promo-video-inner-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        padding: 0 0.9375rem;
+        margin: 0 auto;
+
+        
+        & video{
+            border-radius: 1.25rem;
+            object-fit: cover;
+
+            width: 85.141rem;
+            max-width: 100%;
+            max-height: 18.75rem;
+        }
+    }
 
 }
 
@@ -609,17 +684,10 @@ ul{
 
 
 
-
-
-
 /* ============================================================ */
 /* TABLET */
 /* ============================================================ */
 @media (min-width: 700px) {
-    body{
-        background-color: rgb(104, 140, 104);
-    }
-
     .mobile{ display: none; }
     .tablet{ display: flex; }
 
@@ -629,39 +697,60 @@ ul{
         & img { margin-left: 0.875rem; }
     }
 
+
+    /* Main Body */
+    .section-title-wrapper{
+        & h2{
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+
+
+    /* Hero Section */
     #hero-video-wrapper{
         height: 348px;
     }
 
-    /* Speakers */
+
+
+    /* Speakers Section */
     #speakers-title-wrapper h2{
         font-size: 2rem;
         line-height: 2.5rem;
     }
-
-    #speakers-grid{ gap: 24px; }
     
+    #speakers-grid{
+        grid-template-columns: repeat(3, minmax(5rem, 1fr));
+        gap: 1.5rem;
+    }
 
+
+
+    /* Brands */
+    .brands-grid{
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+    }
+
+
+
+    /* Promo Video */
+    #promo-video-inner-wrapper{ 
+        & video{
+            max-height: none;
+        }
+    }
 }
 /* ============================================================ */
+
 
 
 /* ============================================================ */
 /* LARGE TABLET */
 /* ============================================================ */
 @media (min-width: 950px) {
-    body{
-        background-color: rgb(88, 195, 219);
-    }
-
-
     /* Main Body */
-
-    
-    .section-inner-wrapper{
-        padding: 0 3.5rem;
-    }
-
     
     #hero-section{
         padding-top: 64px;
@@ -724,7 +813,10 @@ ul{
         line-height: 3rem;
     }
 
-    #speakers-grid{ gap: 2rem; }
+    #speakers-grid{ 
+        grid-template-columns: repeat(4, minmax(5rem, 1fr));
+        gap: 1.75rem;
+    }
      
     .learn-more-button{
         width:auto;
@@ -733,25 +825,18 @@ ul{
 /* ============================================================ */
 
 
+
 /* ============================================================ */
 /* DEKSTOP */
 /* ============================================================ */
 @media (min-width: 1280px){
-    body{
-        background-color: rgb(104, 135, 140);
-    }
-
 
     #nav-menu-toggle-label { display: none; }
     .nav-menu-toggle:checked ~ .nav-menu-mobile { display: none; }
     .tablet{ display: none; }
     .desktop{ display: flex; }
 
-
-
-
     .nav-wrapper{ padding: 0 3.5rem;}
-
 
     .nav-menu-desktop{
         display: flex;
@@ -904,12 +989,6 @@ ul{
         }
     }
 
-    
-
-
-
-
-
     #nav-login-desktop{
         display: flex;
         justify-content: center;
@@ -935,6 +1014,26 @@ ul{
                 fill: var(--white);
             }
         }
+    }
+
+
+    /* Main Body */
+
+    .section-inner-wrapper{
+        width: 64rem;
+    }   
+
+    .section-title-wrapper{
+        & h2{
+            font-size: 2.5rem;
+            line-height: 3rem;
+            letter-spacing: 0.25px;
+        }
+    }
+
+    #speakers-grid{ 
+        grid-template-columns: repeat(5, minmax(5rem, 1fr));
+        gap: 1.98rem;
     }
 }
 /* ============================================================ */
