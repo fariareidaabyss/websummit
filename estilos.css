@@ -618,7 +618,127 @@ ul{
         }
     }
 
-    
+
+    /* News Letter Form 1 */
+    #newsletter-1{
+        background: var(--form1-gradient);
+    }
+
+    /* One column on small screens. The second column only appears when
+       there is room for two columns of at least 17rem (like the original, ~768px) */
+    .newsletter-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+        column-gap: 8rem;
+
+        width: min(100% - 1.875rem, 44.875rem);
+        margin: 0 auto;
+        padding: 0 0.9375rem;
+
+        color: var(--white);
+    }
+
+    .newsletter-text{
+        & h2{
+            margin: 0.83em 0;
+
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 2.25rem;
+            letter-spacing: 0.25px;
+        }
+
+        & p{ margin: 1rem 0; }
+    }
+
+    .newsletter-form{
+        display: flex;
+        flex-direction: column;
+
+        /* Consent text */
+        & p{
+            margin: 1rem 0;
+
+            & a{
+                color: var(--white);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* Label + input */
+    .form-field{
+        display: flex;
+        flex-direction: column;
+
+        padding: 0.75rem 0;
+
+        & label{
+            margin-bottom: 0.5rem;
+
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 0.875rem;
+
+            /* Required field asterisk */
+            & span{
+                margin-left: 0.25rem;
+                vertical-align: top;
+            }
+        }
+
+        & input{
+            height: 48px;
+            padding: 0 0.8rem;
+
+            border: 1px solid #e5e5e5;
+            border-radius: 0.25rem;
+
+            font-family: inherit;
+            font-size: 1rem;
+
+            &:focus{
+                border-color: var(--primary);
+                outline: 2px solid var(--white);
+            }
+        }
+    }
+
+    .form-button-wrapper{
+        padding: 1.25rem 0 2rem;
+
+        & button{
+            width: 100%;
+            height: 48px;
+            padding: 0 1.5rem;
+
+            border: 1px solid #fafafb;
+            border-radius: 0.25rem;
+            background: #eeeeee;
+
+            color: #646464;
+            font-family: inherit;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    /* :valid = every required field is filled in correctly -> button turns teal */
+    .newsletter-form:valid .form-button-wrapper button{
+        border-color: #008484;
+        background: #008484;
+
+        color: var(--white);
+        cursor: pointer;
+
+        &:hover{
+            border-color: var(--secondary);
+            background: var(--secondary);
+        }
+    }
+
+
     /* Brands Sections */
     .brands-grid{
         display: grid;
@@ -727,6 +847,20 @@ ul{
 
 
 
+    /* News Letter Form 1 */
+    .newsletter-text h2{
+        margin-top: 0;
+
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .form-button-wrapper button{
+        width: auto;
+    }
+
+
+
     /* Brands */
     .brands-grid{
         grid-template-columns: repeat(5, 1fr);
@@ -820,6 +954,16 @@ ul{
      
     .learn-more-button{
         width:auto;
+    }
+
+    /* News Letter Form 1 */
+    .newsletter-grid{
+        width: min(100% - 1.875rem, 60.625rem);
+    }
+
+    .newsletter-text h2{
+        font-size: 2.5rem;
+        line-height: 3rem;
     }
 }
 /* ============================================================ */
@@ -1031,9 +1175,16 @@ ul{
         }
     }
 
-    #speakers-grid{ 
+    #speakers-grid{
         grid-template-columns: repeat(5, minmax(5rem, 1fr));
         gap: 1.98rem;
+    }
+
+    /* News Letter Form 1 */
+    /* The inner wrapper already has the side padding here */
+    .newsletter-grid{
+        width: auto;
+        padding: 0;
     }
 }
 /* ============================================================ */

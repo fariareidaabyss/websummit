@@ -717,12 +717,40 @@
         </section>
 
         <!-- News Letter Form 1 -->
-        <section class="lorem"> <!-- Remover class -->
+        <section id="newsletter-1">
             <div class="section-inner-wrapper">
-                <!-- Remover -->
-                <span>News Letter Form 1</span>
+                <div class="newsletter-grid">
 
-                <!-- Conteudo aqui -->
+                    <!-- Text -->
+                    <div class="newsletter-text">
+                        <h2>Get access to exclusive discounts and announcements</h2>
+                        <p>Join the Web Summit network now for updates, speakers news, and early access to offers.</p>
+                    </div>
+
+                    <!-- Form -->
+                    <form class="newsletter-form" action="#">
+                        <!-- Each label is linked to its input through for / id -->
+                        <div class="form-field">
+                            <label for="newsletter-1-email">Email address<span>*</span></label>
+                            <input type="email" id="newsletter-1-email" name="email" placeholder="user@example.com" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="newsletter-1-name">First name<span>*</span></label>
+                            <input type="text" id="newsletter-1-name" name="name" required>
+                        </div>
+
+                        <p>
+                            You may withdraw your consent at any time. Learn more on our
+                            <a href="#">Privacy Policy</a> and <a href="#">T&amp;Cs</a>.
+                        </p>
+
+                        <div class="form-button-wrapper">
+                            <button type="submit">Join our network</button>
+                        </div>
+                    </form>
+
+                </div>
             </div>
         </section>
 
@@ -1160,7 +1188,7 @@
             <div class="section-inner-wrapper">
                 <!-- Remover -->
                 <span>Footer</span>
-
+                
                 <!-- Conteudo aqui -->
             </div>
         </section>
