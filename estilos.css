@@ -98,6 +98,88 @@ ul{
     font-weight: 600;
 }
 
+#experience-section {
+    background: url(./img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 23.625rem;
+    padding: 2.5rem 2rem;
+}
+
+.h1-experience {
+    line-height: normal;
+    text-align: left;
+    text-wrap: balance;
+    
+    font-size: 2.5rem;
+
+    margin-bottom: 1rem;
+    margin-top: 0px;
+    
+    color: var(--white);
+}
+
+.h4-experience {
+    margin-top: 0;
+    color: var(--white);
+    font-weight: 400;
+    padding-bottom: 1.33rem;
+}
+
+.experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience-button-1, .experience-button-2, .experience-button-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    height: 3.125rem;
+    padding: 1rem 1.5rem;
+    gap: 1.5rem;
+
+    width: 100%;
+
+    border-radius: 10rem;
+    border: 2px solid var(--white);
+    background: var(--btn-learn-more);
+    background: rgba(255, 255, 255, 0.2);
+
+    color: var(--white);
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    font-weight: 400;
+
+    transition: 0.3s;
+}
+
+.experience-button-1{
+    background: linear-gradient(93.2deg, rgb(222, 14, 123) 1.57%, rgb(107, 74, 164) 70.53%, rgb(0, 172, 168) 95.39%) 0% 0% / 130% 130%;
+}
+
+.experience-button-2 {
+    background: var(--btn-learn-more);
+    border: 0;
+    &:hover {
+        background-color:rgb(6,11,36);
+    }
+}
+
+.experience-button-3 {
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
 .gradient{
     background: var(--btn-gradient);
 }
@@ -798,6 +880,10 @@ ul{
         }
     }
 
+    /* #Experience-section {
+        border-radius: 20px;
+        margin: 1rem;
+    } */
 }
 
 /* ============================================================ */
@@ -816,6 +902,12 @@ ul{
     .nav-logo-wrapper{
         & img { margin-left: 0.875rem; }
     }
+    
+    /* Experience */
+    .experience-grid {
+        margin-right: 0.9375rem;
+        margin-left: 0.9375rem;
+    }
 
 
     /* Main Body */
@@ -826,13 +918,10 @@ ul{
         }
     }
 
-
     /* Hero Section */
     #hero-video-wrapper{
         height: 348px;
     }
-
-
 
     /* Speakers Section */
     #speakers-title-wrapper h2{
@@ -845,8 +934,6 @@ ul{
         gap: 1.5rem;
     }
 
-
-
     /* News Letter Form 1 */
     .newsletter-text h2{
         margin-top: 0;
@@ -858,8 +945,6 @@ ul{
     .form-button-wrapper button{
         width: auto;
     }
-
-
 
     /* Brands */
     .brands-grid{
@@ -874,6 +959,32 @@ ul{
         & video{
             max-height: none;
         }
+    }
+
+    #experience-section {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        border-radius: 20px;
+        margin-right: 0.9375rem;
+        margin-left: 0.9375rem;
+
+    }
+
+    .experience-grid {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .experience-button-1, .experience-button-2, .experience-button-3 {
+        font-size: 1.5rem;
+        width: fit-content;
+    }
+
+    .h1-experience, .h4-experience {
+        text-align: center;
     }
 }
 /* ============================================================ */
@@ -965,6 +1076,14 @@ ul{
         font-size: 2.5rem;
         line-height: 3rem;
     }
+
+    .lorem {
+        border-radius: 20px;
+        margin: 1rem;
+    }
+
+
+    
 }
 /* ============================================================ */
 
@@ -1186,5 +1305,12 @@ ul{
         width: auto;
         padding: 0;
     }
+
+    /* Experience Web Summit */
+    #experience-section {
+        width: 64rem;
+        margin: 0 auto;
+    }
+    
 }
 /* ============================================================ */
