@@ -931,6 +931,8 @@ ul{
         display: inline-flex;
         flex-direction: column;
 
+        margin: 2.75rem 0 1.5rem;
+
         font-size: 1.25rem;
         font-weight: 800;
         line-height: 1.0625rem;
@@ -942,6 +944,7 @@ ul{
             margin-bottom:1.1rem; 
             width: auto;
             height: 2.125rem;
+
         }
     }
 
@@ -1516,7 +1519,6 @@ ul{
     .footer-menu{
         width: 20%;
     }
-    
 
 }
 /* ============================================================ */
