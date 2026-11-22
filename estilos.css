@@ -1322,6 +1322,8 @@ ul{
     .lorem {
         border-radius: 20px;
         margin: 1rem;
+        /* width: 100% + 1rem  As margens eram mais largas que a página. */
+        width: auto;
     }
 
 
