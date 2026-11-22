@@ -20,6 +20,11 @@
     --footer-bg: #f6f6f7;
     --footer-text: #646464;
     --footer-line: #eeeeee;
+    --form1-gradient: linear-gradient(180deg, #0c1439 0%, #654da0 100%);
+
+    --footer-bg: #f6f6f7;
+    --footer-text: #646464;
+    --footer-line: #eeeeee;
 }
 
 *{
@@ -716,6 +721,12 @@ ul{
         background: var(--accent);
     }
 
+    /* News Letter Form 2 */
+    /* Uses all the Form 1 classes below; only the background is different */
+    #newsletter-2{
+        background: var(--accent);
+    }
+
     /* One column on small screens. The second column only appears when
        there is room for two columns of at least 17rem (like the original, ~768px) */
     .newsletter-grid{
@@ -735,7 +746,10 @@ ul{
             margin: 0.83em 0;
 
             font-size: 2rem;
+            font-size: 2rem;
             font-weight: 600;
+            line-height: 2.5rem;
+            letter-spacing: 0px;
             line-height: 2.5rem;
             letter-spacing: 0px;
         }
@@ -1094,6 +1108,12 @@ ul{
     }
     }
 
+    @media (max-width: 760px){
+        .form-button-wrapper button{
+        width: 100%;
+    }
+    }
+
     /* Brands */
     .brands-grid{
         grid-template-columns: repeat(5, 1fr);
@@ -1133,6 +1153,42 @@ ul{
 
     .h1-experience, .h4-experience {
         text-align: center;
+    }
+
+    /* Footer */
+    /* 46.875rem of content + 2rem of side padding (box-sizing: border-box) */
+    .footer-wrapper{
+        max-width: 48.875rem;
+        padding: 4rem 1rem 7rem;
+    }
+
+    /* Three menus side by side, each one a quarter of the width */
+    .footer-menu{
+        width: 25%;
+
+        & h2{
+            margin-top: -0.7rem;
+            margin-bottom: 1.1rem;
+        }
+    }
+
+    /* Icons on the left, legal links on the right */
+    .footer-bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-social{
+        margin-bottom: 0;
+    }
+
+    /* The 1rem column-gap from mobile keeps the links apart */
+    .footer-legal{
+        align-items: center;
+
+        & a{
+            margin-bottom: 0;
+        }
     }
 
     /* Footer */
@@ -1260,12 +1316,14 @@ ul{
         font-size: 2.5rem;
         line-height: 3rem;
         letter-spacing: 0.25px;
+        letter-spacing: 0.25px;
     }
 
     .lorem {
         border-radius: 20px;
         margin: 1rem;
     }
+
 
 }
 /* ============================================================ */
