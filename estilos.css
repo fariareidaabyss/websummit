@@ -116,6 +116,8 @@ ul{
     background: var(--captcha-bg);
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
     color: white;
+
+    z-index: 1000;
 }
 
 .captcha-inner-container{
@@ -1089,6 +1091,111 @@ ul{
     }
 
 
+
+    /* Reviews Slider */
+    /* position: relative -> referencia para as setas (absolute) no desktop */
+    .review-slider-wrapper{
+        position: relative;
+
+        max-width: 63.438rem;
+        padding: 0 1rem;
+        margin: 0 auto;
+    }
+
+    /* Slider estatico (sem JS): sempre 3 cartoes lado a lado.
+       minmax(0, 1fr) deixa as colunas encolherem mais do que o conteudo */
+    .review-content{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .review-item{
+        border: 0.188rem solid var(--primary);
+        border-radius: 0.938rem;
+    }
+
+    /* Faixa com degrade; a foto e mais alta do que a faixa e fica por cima do texto */
+    .review-header{
+        height: 7.125rem;
+
+        border: 0.188rem solid var(--white);
+        border-radius: 0.938rem 0.938rem 0 0;
+        background: var(--slider-gradient);
+
+        & img{
+            position: relative;
+            z-index: 1;
+
+            display: block;
+            /* Em cartoes estreitos a foto encolhe e continua redonda */
+            width: min(6.188rem, 100%);
+            aspect-ratio: 1 / 1;
+            margin: 2.75rem auto 0;
+
+            border: 0.188rem solid var(--white);
+            border-radius: 50%;
+            background: var(--white);
+            object-fit: cover;
+        }
+    }
+
+    /* O padding de cima deixa espaco para a metade de baixo da foto */
+    .review-info{
+        padding: 3.375rem 1.563rem 1.563rem;
+        text-align: center;
+        /* Palavras compridas partem em vez de sair dos cartoes estreitos */
+        overflow-wrap: anywhere;
+
+        & h3{
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+        }
+
+        & p{ margin: 0; }
+
+        & blockquote{
+            margin: 1rem 0 0;
+
+            font-size: 0.875rem;
+            line-height: 1.188rem;
+        }
+    }
+
+    /* As setas so aparecem no desktop */
+    .review-arrow{
+        display: none;
+    }
+
+    /* Bolinhas estaticas: a ativa e maior e mais escura */
+    .review-dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.375rem;
+
+        height: 1.063rem;
+        margin: 1rem auto;
+    }
+
+    .review-dot{
+        width: 0.6875rem;
+        height: 0.6875rem;
+        padding: 0;
+
+        border: 0;
+        border-radius: 50%;
+        background: #d8d8d8;
+
+        &.active{
+            width: 1rem;
+            height: 1rem;
+            background: #929293;
+        }
+    }
+
+
     
     /* Testimonies */
     #testimonies-section{
@@ -1383,6 +1490,14 @@ ul{
 
     .h1-experience, .h4-experience {
         text-align: center;
+    }
+
+
+
+    /* Reviews Slider */
+    .review-info blockquote{
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 
 
@@ -1848,12 +1963,56 @@ ul{
         gap: 1.98rem;
     }
 
+
+
     /* News Letter Form 1 */
     /* The inner wrapper already has the side padding here */
     .newsletter-grid{
         width: auto;
         padding: 0;
     }
+
+
+
+    /* Reviews Slider */
+    /* Setas dos dois lados, centradas na vertical em relacao aos cartoes.
+       -1.5rem = ficam mesmo por fora dos cartoes, como no original */
+    .review-arrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 2rem;
+        height: 2rem;
+        padding: 0;
+
+        border: 0;
+        border-radius: 50%;
+        background: transparent;
+
+        color: black;
+        cursor: pointer;
+
+        & svg{
+            width: 1.5rem;
+            height: 1.5rem;
+
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    }
+
+    .review-arrow-prev{ left: -1.5rem; }
+    .review-arrow-next{ right: -1.5rem; }
+
+    
 
     /* Footer */
     .footer-wrapper{
